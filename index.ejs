@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="/style.css" />
+
+<h1>Welcome to Jitney</h1>
+<form action="/rides" method="POST">
+  <input type="text" name="driver" placeholder="Driver's name" required />
+  <input type="text" name="passenger" placeholder="Passenger's name" required />
+  <input
+    type="text"
+    name="startLocation"
+    placeholder="Start Location"
+    required
+  />
+  <input type="text" name="endLocation" placeholder="End Location" required />
+  <button type="submit">Create Ride</button>
+</form>
+
+<head>
+  <title>Jitney Luxury Rides</title>
+</head>
+<body>
+  <h1>Jitney Rides</h1>
+  <h2>Select a Vehicle</h2>
+
+  <div class="vehicle-selection">
+    <!-- Hi-End Luxury Vehicle -->
+    <div>
+      <h2>Hi-End Luxury Vehicle</h2>
+      <a href="#">
+        <img
+          src="https://pictures.dealer.com/j/jaguarcary/0101/6ea480b3e3c0aa6f42e341800c327cb5x.jpg?impolicy=resize&w=414"
+          alt="Hi-End Luxury Vehicle"
+        />
+      </a>
+    </div>
+
+    <!-- Luxury Vehicle -->
+    <div>
+      <h2>Luxury Vehicle</h2>
+      <a href="#">
+        <img
+          src="https://www.masterliveryservices.com/wp-content/uploads/2021/06/Birmingham-car-service.png"
+          alt="Luxury Vehicle"
+        />
+      </a>
+    </div>
+
+    <!-- Standard Vehicle -->
+    <div>
+      <h2>Standard Vehicle</h2>
+      <a href="#">
+        <img
+          src="https://img2.carmax.com/assets/25776548/hero.jpg?width=400&height=300"
+          alt="Standard Vehicle"
+        />
+      </a>
+    </div>
+  </div>
+
+  <h1>Find a Route (Trucking)</h1>
+  <form action="/searchRoute" method="POST">
+    <input type="text" name="startLat" placeholder="Start Latitude" required />
+    <input type="text" name="startLon" placeholder="Start Longitude" required />
+    <input type="text" name="endLat" placeholder="End Latitude" required />
+    <input type="text" name="endLon" placeholder="End Longitude" required />
+    <button type="submit">Find Route</button>
+  </form>
+
+  <div class="vehicle-selection">
+    <!-- Volvo Semi Truck -->
+    <div>
+      <h2>Volvo Semi Truck</h2>
+      <a href="#">
+        <img
+          src="https://marvel-b1-cdn.bc0a.com/f00000000295579/www.tecequipment.com/app/uploads/2020/10/Volvo-Semi-Truck-900x436.jpg"
+          alt="Semi Truck"
+        />
+      </a>
+    </div>
+
+    <!-- Freightliner Truck -->
+    <div>
+      <h2>Freightliner Truck</h2>
+      <a href="#">
+        <img
+          src="https://preview.redd.it/lnnnr2o829y51.jpg?width=640&crop=smart&auto=webp&s=e2cf67dce27c908cce7b3c471117b693d7e514b8"
+          alt="Freightliner Truck"
+        />
+      </a>
+    </div>
+
+    <!-- Sprinter Van -->
+    <div>
+      <h2>Sprinter Van</h2>
+      <a href="#">
+        <img
+          src="https://vehicle-images.dealerinspire.com/f784-110009933/W1X5NDHY5RP731276/bcbab982792fcfd1a93aabff07a6cae6.jpg"
+          alt="Sprinter Van"
+        />
+      </a>
+    </div>
+  </div>
+
+  <a href="/">Search another route</a>
+</body>

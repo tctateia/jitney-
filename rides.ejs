@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Collection</title>
+    <link rel="stylesheet" href="/style.css" />
+
+    <h1>All Rides</h1>
+    <ul>
+      <% if (rides.length > 0) { %> <% rides.forEach(ride => { %>
+      <li>
+        <%= ride.driver %> is driving <%= ride.passenger %> from <%=
+        ride.startLocation %> to <%= ride.endLocation %>
+      </li>
+      <% }); %> <% } else { %>
+      <li>No rides available at the moment.</li>
+      <% } %>
+    </ul>
+
+    <a href="/">Create another ride</a>
+    <h3>COPYRIGHT 2024 THECURE LLC *All Rights Reserved*</h3>
+  </head>
+</html>

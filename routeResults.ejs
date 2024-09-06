@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Collection</title>
+    <link rel="stylesheet" href="/style.css" />
+
+    <h1>Route Results</h1>
+    <% if (routeData && routeData.features && routeData.features.length > 0) {
+    %>
+    <h2>Route Information</h2>
+    <p>
+      <strong>Distance:</strong> <%= (routeData.features[0].properties.distance
+      / 1000).toFixed(2) %> kilometers
+    </p>
+    <p>
+      <strong>Time:</strong> <%= (routeData.features[0].properties.time /
+      60).toFixed(2) %> minutes
+    </p>
+    <ul>
+      <h3>Route Coordinates:</h3>
+      <% routeData.features[0].geometry.coordinates.forEach(coordinateSet => {
+      %> <% coordinateSet.forEach(coordinate => { %>
+      <li>Longitude: <%= coordinate[0] %>, Latitude: <%= coordinate[1] %></li>
+      <% }); %> <% }); %>
+    </ul>
+    <% } else { %>
+    <p>No route data available.</p>
+    <% } %>
+    <a href="/">Search another route</a>
+  </head>
+</html>
